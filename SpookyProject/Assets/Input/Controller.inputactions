@@ -12,6 +12,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Roll",
+                    "type": "Button",
+                    "id": "51e078bf-fcd0-4ee8-b35b-356aec30e354",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -29,7 +37,7 @@
                 {
                     "name": "up",
                     "id": "8e53c238-c261-47c3-b81c-ab6eea5d292b",
-                    "path": "",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -40,7 +48,7 @@
                 {
                     "name": "down",
                     "id": "5c01cb37-6786-415b-99a8-7dea2e1b5ad1",
-                    "path": "",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -51,7 +59,7 @@
                 {
                     "name": "left",
                     "id": "fef0d41c-5d86-4ff5-ac62-7fd35f40ff8a",
-                    "path": "",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -62,13 +70,46 @@
                 {
                     "name": "right",
                     "id": "dc3ed25a-f15c-4ab7-aa91-e2e5ac124e20",
-                    "path": "",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "f9085e6c-5d41-4ffe-a67b-c69cbc025a3a",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "14d9461a-f18b-4e5c-a905-d5ca4097dacf",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "011fa760-4ece-4622-ba1d-32952f251491",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
