@@ -33,6 +33,22 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ef6d2506-6663-434f-abaf-1c937b571a7b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
+                },
+                {
+                    ""name"": ""HeavyAttack"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""a7b03126-8b37-4d3e-9013-c86f51348e34"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold""
                 }
             ],
             ""bindings"": [
@@ -123,6 +139,50 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""action"": ""Roll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e8e66b2-7073-4692-8028-f7b3276f729f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2d032730-7180-4f84-9d0d-1525fa28a82c"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b763f81-f31f-4217-8703-be252593e513"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HeavyAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ada555d-206b-40b4-92ff-e2edb2665a3d"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HeavyAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -133,6 +193,8 @@ public class @Controller : IInputActionCollection, IDisposable
         m_MainController = asset.FindActionMap("MainController", throwIfNotFound: true);
         m_MainController_Move = m_MainController.FindAction("Move", throwIfNotFound: true);
         m_MainController_Roll = m_MainController.FindAction("Roll", throwIfNotFound: true);
+        m_MainController_Attack = m_MainController.FindAction("Attack", throwIfNotFound: true);
+        m_MainController_HeavyAttack = m_MainController.FindAction("HeavyAttack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -184,12 +246,16 @@ public class @Controller : IInputActionCollection, IDisposable
     private IMainControllerActions m_MainControllerActionsCallbackInterface;
     private readonly InputAction m_MainController_Move;
     private readonly InputAction m_MainController_Roll;
+    private readonly InputAction m_MainController_Attack;
+    private readonly InputAction m_MainController_HeavyAttack;
     public struct MainControllerActions
     {
         private @Controller m_Wrapper;
         public MainControllerActions(@Controller wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_MainController_Move;
         public InputAction @Roll => m_Wrapper.m_MainController_Roll;
+        public InputAction @Attack => m_Wrapper.m_MainController_Attack;
+        public InputAction @HeavyAttack => m_Wrapper.m_MainController_HeavyAttack;
         public InputActionMap Get() { return m_Wrapper.m_MainController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -205,6 +271,12 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Roll.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnRoll;
                 @Roll.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnRoll;
                 @Roll.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnRoll;
+                @Attack.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnAttack;
+                @HeavyAttack.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHeavyAttack;
+                @HeavyAttack.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHeavyAttack;
+                @HeavyAttack.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHeavyAttack;
             }
             m_Wrapper.m_MainControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -215,6 +287,12 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Roll.started += instance.OnRoll;
                 @Roll.performed += instance.OnRoll;
                 @Roll.canceled += instance.OnRoll;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
+                @HeavyAttack.started += instance.OnHeavyAttack;
+                @HeavyAttack.performed += instance.OnHeavyAttack;
+                @HeavyAttack.canceled += instance.OnHeavyAttack;
             }
         }
     }
@@ -223,5 +301,7 @@ public class @Controller : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnHeavyAttack(InputAction.CallbackContext context);
     }
 }
