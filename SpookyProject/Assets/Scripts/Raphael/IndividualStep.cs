@@ -31,7 +31,7 @@ public class IndividualStep : MonoBehaviour
         }
 
         //Reset le Puzzle pour que le joueur puisse reessayer
-        if (!puzzleMaster.playesIsPresent)
+        if (!puzzleMaster.playesIsPresent && puzzleMaster.playerHasFailed)
         {
             hasBeenStepped = false;
         }

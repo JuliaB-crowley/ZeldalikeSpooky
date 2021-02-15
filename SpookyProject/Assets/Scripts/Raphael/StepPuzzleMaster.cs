@@ -41,8 +41,14 @@ public class StepPuzzleMaster : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playesIsPresent = false;
-            playerHasFailed = false;
+            StartCoroutine(ResetTiles());
         }
+    }
+
+    IEnumerator ResetTiles()
+    {
+        playesIsPresent = false;
+        yield return new WaitForSeconds(0.02f);
+        playerHasFailed = false;
     }
 }
