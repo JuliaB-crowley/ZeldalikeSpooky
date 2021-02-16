@@ -24,7 +24,8 @@ namespace character
 
 
         [SerializeField]
-        bool isInRoll, isCrouching, isInRecoil, isInImmunity, isInRecover;
+        bool isInRoll,  isInRecoil, isInImmunity, isInRecover;
+        public bool isCrouching;
         [SerializeField]
         bool attackMaintained, isInBuildup, isInAttack;
 
@@ -88,7 +89,7 @@ namespace character
                     dirAngle = DirectionAngle.South;
                 }
 
-                Debug.Log(lastAngle.ToString() + dirAngle.ToString());
+                //Debug.Log(lastAngle.ToString() + dirAngle.ToString());
 
 
                 //animation movement on
@@ -153,12 +154,17 @@ namespace character
 
         void Crouch()
         {
-            Debug.Log("is Crouching !");
             isCrouching = !isCrouching;
+            //changement mode anim debout accroupi
+            //son
+
             if (isCrouching)
             {
-                //anim crouch //sons
-                //faire en sorte qu'on passe au travers des layers
+                Debug.Log("is Crouching !");
+                
+                //indique aux collisions détectors d'ignorer le layer crouchable 
+                //détection des ennemis baisse
+                
             }
         }
 

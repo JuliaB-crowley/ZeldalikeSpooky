@@ -57,6 +57,22 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Flash"",
+                    ""type"": ""Button"",
+                    ""id"": ""ccdc2700-ee87-4da5-aaa2-594b67e7a597"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Hint"",
+                    ""type"": ""Button"",
+                    ""id"": ""8f0d1136-c018-4616-a8cd-e46df816f476"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -213,6 +229,50 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c44487c7-71f1-49c6-ba9b-6bb5a57f51be"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Flash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d07d226-73dd-4174-b1a7-a1a8101376db"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Flash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f3b47673-d6bc-459e-b7e3-54a262b003b6"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8fff5d1d-5a30-4e3b-ba12-0d6acda1dd14"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -226,6 +286,8 @@ public class @Controller : IInputActionCollection, IDisposable
         m_MainController_Attack = m_MainController.FindAction("Attack", throwIfNotFound: true);
         m_MainController_HeavyAttack = m_MainController.FindAction("HeavyAttack", throwIfNotFound: true);
         m_MainController_Crouch = m_MainController.FindAction("Crouch", throwIfNotFound: true);
+        m_MainController_Flash = m_MainController.FindAction("Flash", throwIfNotFound: true);
+        m_MainController_Hint = m_MainController.FindAction("Hint", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -280,6 +342,8 @@ public class @Controller : IInputActionCollection, IDisposable
     private readonly InputAction m_MainController_Attack;
     private readonly InputAction m_MainController_HeavyAttack;
     private readonly InputAction m_MainController_Crouch;
+    private readonly InputAction m_MainController_Flash;
+    private readonly InputAction m_MainController_Hint;
     public struct MainControllerActions
     {
         private @Controller m_Wrapper;
@@ -289,6 +353,8 @@ public class @Controller : IInputActionCollection, IDisposable
         public InputAction @Attack => m_Wrapper.m_MainController_Attack;
         public InputAction @HeavyAttack => m_Wrapper.m_MainController_HeavyAttack;
         public InputAction @Crouch => m_Wrapper.m_MainController_Crouch;
+        public InputAction @Flash => m_Wrapper.m_MainController_Flash;
+        public InputAction @Hint => m_Wrapper.m_MainController_Hint;
         public InputActionMap Get() { return m_Wrapper.m_MainController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -313,6 +379,12 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Crouch.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnCrouch;
                 @Crouch.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnCrouch;
                 @Crouch.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnCrouch;
+                @Flash.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnFlash;
+                @Flash.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnFlash;
+                @Flash.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnFlash;
+                @Hint.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHint;
+                @Hint.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHint;
+                @Hint.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHint;
             }
             m_Wrapper.m_MainControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -332,6 +404,12 @@ public class @Controller : IInputActionCollection, IDisposable
                 @Crouch.started += instance.OnCrouch;
                 @Crouch.performed += instance.OnCrouch;
                 @Crouch.canceled += instance.OnCrouch;
+                @Flash.started += instance.OnFlash;
+                @Flash.performed += instance.OnFlash;
+                @Flash.canceled += instance.OnFlash;
+                @Hint.started += instance.OnHint;
+                @Hint.performed += instance.OnHint;
+                @Hint.canceled += instance.OnHint;
             }
         }
     }
@@ -343,5 +421,7 @@ public class @Controller : IInputActionCollection, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnHeavyAttack(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
+        void OnFlash(InputAction.CallbackContext context);
+        void OnHint(InputAction.CallbackContext context);
     }
 }

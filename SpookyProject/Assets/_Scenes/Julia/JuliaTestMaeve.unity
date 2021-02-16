@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 193868455}
   - component: {fileID: 193868454}
   - component: {fileID: 193868453}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Maeve
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -191,11 +191,13 @@ MonoBehaviour:
   yVelocity: 0
   accelerationTime: 0.05
   immunityTime: 1
+  lastAngle: 0
+  dirAngle: 0
   isInRoll: 0
-  isCrouching: 0
   isInRecoil: 0
   isInImmunity: 0
   isInRecover: 0
+  isCrouching: 0
   attackMaintained: 0
   isInBuildup: 0
   isInAttack: 0
@@ -242,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375030793}
   - component: {fileID: 375030792}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DownCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,8 +263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76bb747a6748d344b860c6d847164bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaeveScript: {fileID: 193868454}
   radius: 0.05
   blocksPlayer:
+    serializedVersion: 2
+    m_Bits: 2112
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
   isCollision: 0
@@ -290,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 542232472}
   - component: {fileID: 542232471}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,8 +315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76bb747a6748d344b860c6d847164bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaeveScript: {fileID: 193868454}
   radius: 0.05
   blocksPlayer:
+    serializedVersion: 2
+    m_Bits: 2112
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
   isCollision: 0
@@ -338,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657852080}
   - component: {fileID: 657852079}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UpCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,8 +367,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76bb747a6748d344b860c6d847164bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaeveScript: {fileID: 193868454}
   radius: 0.05
   blocksPlayer:
+    serializedVersion: 2
+    m_Bits: 2112
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
   isCollision: 0
@@ -385,7 +399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 722989862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1389543628}
   - component: {fileID: 1389543627}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,8 +528,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76bb747a6748d344b860c6d847164bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaeveScript: {fileID: 193868454}
   radius: 0.05
   blocksPlayer:
+    serializedVersion: 2
+    m_Bits: 2112
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
   isCollision: 0
@@ -960,7 +978,7 @@ GameObject:
   - component: {fileID: 2101649195}
   - component: {fileID: 2101649194}
   - component: {fileID: 2101649193}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

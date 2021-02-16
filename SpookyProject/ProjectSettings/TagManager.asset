@@ -15,8 +15,8 @@ TagManager:
   - Ennemies
   - BreakableObjects
   - HUD
-  - 
-  - 
+  - Player
+  - CrouchingBlock
   - 
   - 
   - 
