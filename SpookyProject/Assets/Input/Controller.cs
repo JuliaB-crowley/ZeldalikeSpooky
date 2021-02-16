@@ -49,6 +49,14 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Hold""
+                },
+                {
+                    ""name"": ""Crouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""56a2eb90-b20e-43ed-8a0b-4cf86944dd72"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -121,7 +129,7 @@ public class @Controller : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""14d9461a-f18b-4e5c-a905-d5ca4097dacf"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -183,6 +191,28 @@ public class @Controller : IInputActionCollection, IDisposable
                     ""action"": ""HeavyAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""722caa08-4abc-4efd-bf98-b0eb881bab5e"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42f06e26-7ca7-48f7-878d-984e0f9ecc2a"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -195,6 +225,7 @@ public class @Controller : IInputActionCollection, IDisposable
         m_MainController_Roll = m_MainController.FindAction("Roll", throwIfNotFound: true);
         m_MainController_Attack = m_MainController.FindAction("Attack", throwIfNotFound: true);
         m_MainController_HeavyAttack = m_MainController.FindAction("HeavyAttack", throwIfNotFound: true);
+        m_MainController_Crouch = m_MainController.FindAction("Crouch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -248,6 +279,7 @@ public class @Controller : IInputActionCollection, IDisposable
     private readonly InputAction m_MainController_Roll;
     private readonly InputAction m_MainController_Attack;
     private readonly InputAction m_MainController_HeavyAttack;
+    private readonly InputAction m_MainController_Crouch;
     public struct MainControllerActions
     {
         private @Controller m_Wrapper;
@@ -256,6 +288,7 @@ public class @Controller : IInputActionCollection, IDisposable
         public InputAction @Roll => m_Wrapper.m_MainController_Roll;
         public InputAction @Attack => m_Wrapper.m_MainController_Attack;
         public InputAction @HeavyAttack => m_Wrapper.m_MainController_HeavyAttack;
+        public InputAction @Crouch => m_Wrapper.m_MainController_Crouch;
         public InputActionMap Get() { return m_Wrapper.m_MainController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -277,6 +310,9 @@ public class @Controller : IInputActionCollection, IDisposable
                 @HeavyAttack.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHeavyAttack;
                 @HeavyAttack.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHeavyAttack;
                 @HeavyAttack.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnHeavyAttack;
+                @Crouch.started -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnCrouch;
+                @Crouch.performed -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnCrouch;
+                @Crouch.canceled -= m_Wrapper.m_MainControllerActionsCallbackInterface.OnCrouch;
             }
             m_Wrapper.m_MainControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -293,6 +329,9 @@ public class @Controller : IInputActionCollection, IDisposable
                 @HeavyAttack.started += instance.OnHeavyAttack;
                 @HeavyAttack.performed += instance.OnHeavyAttack;
                 @HeavyAttack.canceled += instance.OnHeavyAttack;
+                @Crouch.started += instance.OnCrouch;
+                @Crouch.performed += instance.OnCrouch;
+                @Crouch.canceled += instance.OnCrouch;
             }
         }
     }
@@ -303,5 +342,6 @@ public class @Controller : IInputActionCollection, IDisposable
         void OnRoll(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnHeavyAttack(InputAction.CallbackContext context);
+        void OnCrouch(InputAction.CallbackContext context);
     }
 }

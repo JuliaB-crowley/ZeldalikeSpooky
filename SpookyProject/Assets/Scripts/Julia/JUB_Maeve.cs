@@ -29,7 +29,7 @@ public class JUB_Maeve : MonoBehaviour
     public LayerMask ennemies, breakableObjects;
     public int attackDamage;
     public bool ennemyWasHitOnce;
-    List<Collider2D> ennemiesHitLastTime;
+    List<Collider2D> ennemiesHitLastTime = new List<Collider2D>();
     
     // Start is called before the first frame update
     void Start()
@@ -42,9 +42,10 @@ public class JUB_Maeve : MonoBehaviour
         AttackProfile heavyAttack = new AttackProfile(3, new Vector2(2, 1),0, 0.8f);
 
         controller.MainController.Roll.performed += ctx => Roll();
+        controller.MainController.Crouch.performed += ctx => Crouch();
+        //controller.MainController.Crouch.performed += ctx => isCrouching = !isCrouching;
         controller.MainController.Attack.performed += ctx => Attack(quickAttack);// Attack();
         controller.MainController.HeavyAttack.performed += ctx => Attack(heavyAttack);
-        //controller.MainController.Crouch.performed += ctx => isCrouching = !isCrouching;
     }
 
     // Update is called once per frame
@@ -122,6 +123,17 @@ public class JUB_Maeve : MonoBehaviour
 
     }
 
+    void Crouch()
+    {
+        Debug.Log("is Crouching !");
+        isCrouching = !isCrouching;
+        if (isCrouching)
+        {
+            //anim crouch //sons
+            //faire en sorte qu'on passe au travers des layers
+        }
+    }
+
     void Roll()
     {
         if (!isInRecover)
@@ -166,7 +178,14 @@ public class JUB_Maeve : MonoBehaviour
     {
         if (!isInRecover && !isInBuildup && !isInRoll && !isCrouching)
         {
-            ennemiesHitLastTime.Clear();
+            if(ennemiesHitLastTime == null)
+            {
+                return;
+            }
+            else
+            {
+                ennemiesHitLastTime.Clear();
+            }
             isInBuildup = true;
             StartCoroutine(Buildup(attackProfile));
         }
