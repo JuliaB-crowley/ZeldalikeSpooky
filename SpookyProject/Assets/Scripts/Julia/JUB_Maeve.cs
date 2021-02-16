@@ -31,7 +31,7 @@ namespace character
 
         //combat
         public Transform attackPoint;
-        public float attackRange, attackTime, attackAngle;
+        public float attackRange, attackTime;
         public Vector2 quickAtkZone, heavyAtkZone;
         public LayerMask ennemies, breakableObjects;
         public int attackDamage;
@@ -210,34 +210,31 @@ namespace character
 
         void Attack(AttackProfile attackProfile)
         {
+            Vector2 attackVector = Vector2.zero;
             if (!isInRecover && !isInBuildup && !isInRoll && !isCrouching)
             {
-                if (ennemiesHitLastTime == null)
-                {
-                    return;
-                }
-                else
-                {
-                    ennemiesHitLastTime.Clear();
-                }
+                ennemiesHitLastTime.Clear();
 
                 switch (dirAngle)
                 {
                     case DirectionAngle.North:
-                        attackAngle = 0;
+                        attackVector = Vector2.up;
                         break;
 
                     case DirectionAngle.West:
+                        attackVector = Vector2.left;
                         break;
 
                     case DirectionAngle.Est:
+                        attackVector = Vector2.right;
                         break;
 
                     case DirectionAngle.South:
-                        attackAngle = 90;
+                        attackVector = Vector2.down;
                         break;
                 }
                 isInBuildup = true;
+                attackProfile.atkVector = attackVector;
                 StartCoroutine(Buildup(attackProfile));
             }
         }
@@ -252,8 +249,7 @@ namespace character
         IEnumerator Hit(AttackProfile attackProfile)
         {
             Collider2D[] hitEnnemies = Physics2D.OverlapCircleAll(transform.position, attackProfile.atkZone.x, ennemies);
-            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(attackPoint.position, attackProfile.atkZone.x, breakableObjects);
-
+            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, attackProfile.atkZone.x, breakableObjects);
 
             if (!ennemyWasHitOnce)
             {
@@ -261,10 +257,22 @@ namespace character
                 {
                     if (!ennemiesHitLastTime.Contains(ennemy))
                     {
-                        ennemy.GetComponent<JUB_EnnemyDamage>().TakeDamage(attackProfile.atkDamage);
-                        Debug.Log("attack was performed");
-                        ennemyWasHitOnce = true;
-                        ennemiesHitLastTime.Add(ennemy);
+                        Debug.Log(ennemy.bounds.extents.magnitude);
+                        Vector2 ennemyDirection = ennemy.transform.position - transform.position;
+                        float ennemyAngle = Vector2.Angle(attackProfile.atkVector, ennemyDirection);
+                        float a = ennemyDirection.magnitude;
+                        float b = ennemyDirection.magnitude;
+                        float c = ennemy.bounds.extents.x * 2;
+                        float additionalAngle = Mathf.Rad2Deg * Mathf.Acos(((a * a) + (b * b) - (c * c)) / (2 * (a * b)));
+                        float totalAngle = attackProfile.atkZone.y + additionalAngle;
+                        //Debug.Log("Additional Angle = " + additionalAngle + " / AA+AtkAngle = " + totalAngle + " / Ennemy Angle = " + ennemyAngle);
+                        if (ennemyAngle <= totalAngle)
+                        {
+                            ennemy.GetComponent<JUB_EnnemyDamage>().TakeDamage(attackProfile.atkDamage);
+                            Debug.Log("attack was performed");
+                            ennemiesHitLastTime.Add(ennemy);
+
+                        }
                     }
                 }
 
@@ -276,6 +284,7 @@ namespace character
             }
 
             yield return new WaitForSeconds(attackProfile.atkRecover);
+            isInRecover = false;
         }
 
         private void OnDrawGizmosSelected()
@@ -312,7 +321,7 @@ namespace character
             }
 
             public float atkDamage, atkRecover, atkBuildup;
-            public Vector2 atkZone;
+            public Vector2 atkZone, atkVector;
 
             public void ChangeDamage(float changeAmount)
             {
