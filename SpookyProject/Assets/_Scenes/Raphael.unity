@@ -260,6 +260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torcheMaterial: {fileID: 2100000, guid: 0f65ca2de5c52d147aafc71c6de885f4, type: 2}
   isLit: 0
+  wasUnlit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &505952449
 GameObject:
   m_ObjectHideFlags: 0

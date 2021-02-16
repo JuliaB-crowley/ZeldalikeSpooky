@@ -1,6 +1,10 @@
 Using pre-set license
 Built from '2020.2/staging' branch; Version is '2020.2.3f1 (8ff31bc5bf5b) revision 9433883'; Using compiler version '192528614'; Build Type 'Release'
+<<<<<<< Updated upstream
 OS: 'Windows 10 Home; OS build 19041.804; Version 2004; 64bit' Language: 'fr' Physical Memory: 8077 MB
+=======
+OS: 'Windows 10 Home; OS build 19041.804; Version 2004; 64bit' Language: 'en' Physical Memory: 16233 MB
+>>>>>>> Stashed changes
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,6 +19,7 @@ C:/Users/ingri/Desktop/ZeldaLikeSpooky/ZeldalikeSpooky/SpookyProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 53807
 Successfully changed project path to: C:/Users/ingri/Desktop/ZeldaLikeSpooky/ZeldalikeSpooky/SpookyProject
 C:/Users/ingri/Desktop/ZeldaLikeSpooky/ZeldalikeSpooky/SpookyProject
@@ -31,10 +36,29 @@ Direct3D:
     Vendor:   
     VRAM:     1977 MB
     Driver:   27.21.14.5241
+=======
+64643
+Successfully changed project path to: C:/Users/rapha/Desktop/GitKraken/Spooky/ZeldalikeSpooky/SpookyProject
+C:/Users/rapha/Desktop/GitKraken/Spooky/ZeldalikeSpooky/SpookyProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 41.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.3f1 (8ff31bc5bf5b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/rapha/Desktop/GitKraken/Spooky/ZeldalikeSpooky/SpookyProject/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f11)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.5751
+>>>>>>> Stashed changes
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -42,11 +66,21 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.3f1/E
 Registered in 0.004471 seconds.
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 38.38 ms, found 0 plugins.
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56756
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003394 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 33.21 ms, found 0 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Completed reload, in  3.133 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
@@ -54,11 +88,43 @@ Registered in 0.002753 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 63.24 ms, found 0 plugins.
+=======
+- Completed reload, in  1.397 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001547 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000029E7274FA20 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E097010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73B6D780 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7344E910 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E729BD420 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E74017030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E729BD420 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E74017030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E3240C0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E734BE010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E730E8B60 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 33.02 ms, found 0 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Completed reload, in  2.200 seconds
 Platform modules already initialized, skipping
 ========================================================================
@@ -72,11 +138,27 @@ System memory in use after: 67.7 MB.
 
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1853.
 Total: 2.444000 ms (FindLiveObjects: 0.174500 ms CreateObjectMapping: 0.216700 ms MarkObjects: 1.960600 ms  DeleteObjects: 0.091100 ms)
+=======
+- Completed reload, in  1.175 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1405 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.6 MB.
+System memory in use after: 67.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1852.
+Total: 2.834200 ms (FindLiveObjects: 0.236800 ms CreateObjectMapping: 0.114200 ms MarkObjects: 2.351600 ms  DeleteObjects: 0.129100 ms)
+>>>>>>> Stashed changes
 
 ========================================================================
 Received Import Request.
   path: Assets/Tree.prefab
   artifactKey: Guid(98e3243bc99b19d45bdeb9bf2b962833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+<<<<<<< Updated upstream
 Start importing Assets/Tree.prefab using Guid(98e3243bc99b19d45bdeb9bf2b962833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9635e8bf64bcb8410cb0e8b9c9f2654') in 0.893691 seconds
   Import took 0.896496 seconds .
 
@@ -106,27 +188,220 @@ Received Import Request.
   artifactKey: Guid(5b99122fb4d9a81488391310cc52bda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Materials/New Material.mat using Guid(5b99122fb4d9a81488391310cc52bda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5aca7d888b23a19802d66c36514643') in 0.054426 seconds
   Import took 0.059428 seconds .
+=======
+Start importing Assets/Tree.prefab using Guid(98e3243bc99b19d45bdeb9bf2b962833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3121e16ccc24bab07cfa5e4586ad4bcb') in 0.375956 seconds
+  Import took 0.380400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.389062 seconds.
+  path: Assets/_Scenes/Raphael.unity
+  artifactKey: Guid(cd708c266f93cea41baf48d8f8b544c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Raphael.unity using Guid(cd708c266f93cea41baf48d8f8b544c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c666aaedffc3a59833c9bc3c0caee9') in 0.007285 seconds
+  Import took 0.009322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009549 seconds.
+  path: Assets/_Scenes/Raphael.unity
+  artifactKey: Guid(cd708c266f93cea41baf48d8f8b544c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Raphael.unity using Guid(cd708c266f93cea41baf48d8f8b544c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c666aaedffc3a59833c9bc3c0caee9') in 0.009625 seconds
+  Import took 0.014094 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002940 seconds.
+Registered in 0.001747 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file data-0000029E46E6E660 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72845030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7282D010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029C8693B500 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E436010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7310E040 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E436010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E727CC010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E436010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6EA6A010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E74D8A030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E03A030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
+- Completed reload, in  0.920 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.2 MB.
+System memory in use after: 71.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1897.
+Total: 1.917000 ms (FindLiveObjects: 0.171200 ms CreateObjectMapping: 0.046300 ms MarkObjects: 1.600300 ms  DeleteObjects: 0.096900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000914 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000029E6E082010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72AB9020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73F34480 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E0CDA10 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E74697BA0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72AB9020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E727CC010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72AB9020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E750FF030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E1A0010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E03A030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.858 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.2 MB.
+System memory in use after: 71.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1899.
+Total: 1.736600 ms (FindLiveObjects: 0.168800 ms CreateObjectMapping: 0.054700 ms MarkObjects: 1.446400 ms  DeleteObjects: 0.065500 ms)
+>>>>>>> Stashed changes
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+<<<<<<< Updated upstream
+Registered in 0.002940 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+=======
+Registered in 0.001236 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000029E6E489040 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73F21010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7480A040 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7422D070 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E75B97EF0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E476330 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E755C5A70 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E4670F0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72F5E050 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73261010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7448E010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+>>>>>>> Stashed changes
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Completed reload, in  2.325 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+=======
+- Completed reload, in  0.891 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.3 MB.
+System memory in use after: 71.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1901.
+Total: 2.394800 ms (FindLiveObjects: 0.188500 ms CreateObjectMapping: 0.059600 ms MarkObjects: 2.084900 ms  DeleteObjects: 0.060800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001172 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000029E72AF8420 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73F21010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7480A040 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E75911010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72FE6020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E732B5010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E755C5A70 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E4670F0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6EA6A010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E9682E010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7448E010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.008 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 71.3 MB.
 System memory in use after: 71.4 MB.
 
+<<<<<<< Updated upstream
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1898.
 Total: 4.814200 ms (FindLiveObjects: 0.181100 ms CreateObjectMapping: 0.282800 ms MarkObjects: 4.272100 ms  DeleteObjects: 0.075800 ms)
 
@@ -137,5 +412,144 @@ Received Import Request.
   artifactKey: Guid(5b99122fb4d9a81488391310cc52bda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Materials/New Material.mat using Guid(5b99122fb4d9a81488391310cc52bda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c1d853131547a19f670db2798b1ab4b') in 0.141145 seconds
   Import took 0.165207 seconds .
+=======
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1903.
+Total: 2.657300 ms (FindLiveObjects: 0.274700 ms CreateObjectMapping: 0.077100 ms MarkObjects: 2.225800 ms  DeleteObjects: 0.078300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001250 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000029E6E489040 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E741CB020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73C73010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E759C5010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E967EC020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E741CB020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E727CC010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E759C5010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E750FF030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E96AA2090 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72C8F010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.048 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.3 MB.
+System memory in use after: 71.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1905.
+Total: 4.136100 ms (FindLiveObjects: 0.299300 ms CreateObjectMapping: 0.073000 ms MarkObjects: 3.674100 ms  DeleteObjects: 0.087500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001108 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000029C86950540 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E742DE270 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E03A030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6EA4E020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6EB0E010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E742DE270 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E75AA31A0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73B54230 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6EA6A010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E96B26020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E03A030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.891 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.3 MB.
+System memory in use after: 71.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1907.
+Total: 2.157500 ms (FindLiveObjects: 0.186000 ms CreateObjectMapping: 0.060100 ms MarkObjects: 1.848700 ms  DeleteObjects: 0.061400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001501 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000029E73E6D030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72C19030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E73B0A020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E746CF030 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E72FE6020 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E6E476330 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E727CC010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E754B19B0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7475F010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E96D560A0 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000029E7448E010 doesn't match image C:\Users\rapha\Desktop\GitKraken\Spooky\ZeldalikeSpooky\SpookyProject\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.938 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1400 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.3 MB.
+System memory in use after: 71.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1909.
+Total: 2.612900 ms (FindLiveObjects: 0.175500 ms CreateObjectMapping: 0.085100 ms MarkObjects: 2.287300 ms  DeleteObjects: 0.063800 ms)
+>>>>>>> Stashed changes
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

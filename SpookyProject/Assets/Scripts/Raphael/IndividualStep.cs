@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class IndividualStep : MonoBehaviour
 {
-    public BoxCollider stepCollider;
-    public bool hasBeenStepped = false, isCorrectStep;
-    public StepPuzzleMaster puzzleMaster;
-    public Material stepMaterial;
-
-    void Start()
-    {
-        stepCollider = this.GetComponent<BoxCollider>();       
-    }
+    // Script qui gère chaque dalle individuellement
+    public bool hasBeenStepped = false; // Ce bool empeche que le joueur puisse réutiliser une seule dalle à l'infinit
+    public bool isCorrectStep; // Ce bool détermine si cette dalle est correcte, comme ça j'ai pas besoin de faire un script pour chaque type de dalle
+    public StepPuzzleMaster puzzleMaster; // Réference au puzzle master
+    public Material stepMaterial; // Je modifie le material juste pour avoir du feedback de test, pas besoin de le maintenir
 
     void Update()
     {
-        //Change la couleur des Steps pour donner du feedback au joueur
+        //Change la couleur des Steps pour donner du feedback
         if (puzzleMaster.playerHasSucceeded)
         {
             stepMaterial.color = Color.green;
@@ -37,6 +33,7 @@ public class IndividualStep : MonoBehaviour
         }
     }
 
+    //Détecte le joueur
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !hasBeenStepped && !puzzleMaster.puzzleHasBeenCompleted)
@@ -46,11 +43,12 @@ public class IndividualStep : MonoBehaviour
         }
     }
 
+    //Check quel type de dalle viens d'être activé puis modifie les ints du puzzle master en accord
     void StepCheck()
     {
         if (isCorrectStep)
         {
-            puzzleMaster.currentSteps ++;
+            puzzleMaster.currentSteps ++; 
             puzzleMaster.correctSteps++;
         }
         else
